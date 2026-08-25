@@ -1,26 +1,25 @@
 # Humble Fern LLC
 
-Static one-page company site for [Humble Fern LLC](https://humblefern.vercel.app).
+Static one-page company site. Local preview: open `index.html`, or `python -m http.server` in this folder.
+
+Target URL after deploy: `https://humblefern.vercel.app`
 
 ## Deploy on Vercel (free)
 
-1. Push this folder to a GitHub repo (or use the Vercel CLI).
-2. In [vercel.com/new](https://vercel.com/new), import the repo.
-3. **Project Name:** `humblefern` (gives `https://humblefern.vercel.app`)
+**Option A — Dashboard**
+
+1. Create a GitHub repo and push this folder (`git remote add origin …` then `git push -u origin master`).
+2. Open [vercel.com/new](https://vercel.com/new) and import that repo.
+3. **Project Name:** `humblefern`
 4. **Framework Preset:** Other
-5. **Root Directory:** `.` (project root — no build step)
-6. Deploy. Confirm the live page shows **HUMBLE FERN LLC** in the HTML.
+5. Leave **Build Command** empty; **Output Directory** empty / `.`
+6. Deploy. Confirm the live page shows **HUMBLE FERN LLC**.
 
-### CLI alternative
-
-```bash
-npx vercel --name humblefern --yes
-```
-
-Production:
+**Option B — CLI** (from this folder, after `npx vercel login`)
 
 ```bash
-npx vercel --prod --name humblefern --yes
+npx vercel --yes
+npx vercel --prod --yes
 ```
 
-No build command. No output directory. Static files at the repo root.
+When prompted, set the project name to `humblefern`. No build step; static files at the repo root.

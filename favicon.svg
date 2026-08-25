@@ -1,27 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <!-- Simple line-drawn fern frond in clay brown -->
-  <path
-    d="M32 58 V14"
-    stroke="#7A5C45"
-    stroke-width="1.75"
-    stroke-linecap="round"
-  />
-  <path
-    d="M32 20 C24 18, 18 14, 14 8
-       M32 28 C22 26, 14 22, 10 16
-       M32 36 C22 34, 14 30, 10 24
-       M32 44 C24 42, 18 38, 14 32
-       M32 20 C40 18, 46 14, 50 8
-       M32 28 C42 26, 50 22, 54 16
-       M32 36 C42 34, 50 30, 54 24
-       M32 44 C40 42, 46 38, 50 32"
-    stroke="#7A5C45"
-    stroke-width="1.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-  <path
-    d="M32 12 C30 10, 30 7, 32 5 C34 7, 34 10, 32 12Z"
-    fill="#7A5C45"
-  />
+  <!-- Calm brown line-drawn fern frond -->
+  <g stroke="#7A5C45" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M32 56 V10" stroke-width="1.75" />
+    <!-- left leaflets -->
+    <path d="M32 18 C26 17 20 14 16 9" stroke-width="1.5" />
+    <path d="M32 26 C24 25 16 21 12 15" stroke-width="1.5" />
+    <path d="M32 34 C24 33 15 29 11 22" stroke-width="1.5" />
+    <path d="M32 42 C25 41 18 37 14 31" stroke-width="1.5" />
+    <path d="M32 50 C27 49 22 46 18 41" stroke-width="1.5" />
+    <!-- right leaflets -->
+    <path d="M32 18 C38 17 44 14 48 9" stroke-width="1.5" />
+    <path d="M32 26 C40 25 48 21 52 15" stroke-width="1.5" />
+    <path d="M32 34 C40 33 49 29 53 22" stroke-width="1.5" />
+    <path d="M32 42 C39 41 46 37 50 31" stroke-width="1.5" />
+    <path d="M32 50 C37 49 42 46 46 41" stroke-width="1.5" />
+  </g>
+  <path d="M32 10 C30.5 8 30.5 5.5 32 4 C33.5 5.5 33.5 8 32 10Z" fill="#7A5C45" />
 </svg>
