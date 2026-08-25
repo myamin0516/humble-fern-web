@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <!-- Simple line-drawn fern frond in clay brown -->
+  <path
+    d="M32 58 V14"
+    stroke="#7A5C45"
+    stroke-width="1.75"
+    stroke-linecap="round"
+  />
+  <path
+    d="M32 20 C24 18, 18 14, 14 8
+       M32 28 C22 26, 14 22, 10 16
+       M32 36 C22 34, 14 30, 10 24
+       M32 44 C24 42, 18 38, 14 32
+       M32 20 C40 18, 46 14, 50 8
+       M32 28 C42 26, 50 22, 54 16
+       M32 36 C42 34, 50 30, 54 24
+       M32 44 C40 42, 46 38, 50 32"
+    stroke="#7A5C45"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M32 12 C30 10, 30 7, 32 5 C34 7, 34 10, 32 12Z"
+    fill="#7A5C45"
+  />
+</svg>
