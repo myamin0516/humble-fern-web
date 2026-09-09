@@ -16,6 +16,8 @@ const mustContain = ["Humble Fern LLC", "hello@humblefern.com"];
 const mustNotContain = [
   "grove.notes.app@gmail.com",
   "myamin0516@gmail.com",
+  "PostHog",
+  "posthog",
 ];
 
 let failed = false;
