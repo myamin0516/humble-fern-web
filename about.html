@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Humble Fern LLC — independent studio making mobile apps in North Carolina. Home of Grove."
+      content="About Humble Fern LLC — a North Carolina studio making mobile apps, including Grove."
     />
-    <title>Humble Fern LLC</title>
+    <title>About — Humble Fern LLC</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,22 +17,24 @@
     />
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body class="home">
-    <main class="letterhead">
+  <body>
+    <main class="letterhead prose">
       <header class="masthead">
-        <img
-          class="mark"
-          src="/favicon.svg"
-          width="36"
-          height="36"
-          alt=""
-          aria-hidden="true"
-        />
-        <h1 class="name">Humble Fern LLC</h1>
+        <a href="/">
+          <img
+            class="mark"
+            src="/favicon.svg"
+            width="36"
+            height="36"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+        <p class="name"><a href="/">Humble Fern LLC</a></p>
         <hr class="rule" />
         <nav aria-label="Site">
           <ul class="site-nav">
-            <li><a href="/about">About</a></li>
+            <li><a href="/about" aria-current="page">About</a></li>
             <li><a href="/privacy">Privacy</a></li>
             <li><a href="/terms">Terms</a></li>
             <li><a href="/support">Support</a></li>
@@ -40,31 +42,26 @@
         </nav>
       </header>
 
-      <p class="lede">Independent studio making mobile apps.</p>
+      <h1 class="page-title">About</h1>
 
-      <p class="body">
-        Humble Fern LLC is a North Carolina limited liability company. We design
-        and build calm, focused apps for everyday use.
-      </p>
-
-      <p class="body">
-        Our first app is Grove, a notes app for iPhone.
-        <a
-          class="inline-link"
-          href="https://grove-waitlist-silk.vercel.app/"
-          rel="noopener noreferrer"
-          >Join the waitlist</a
-        >.
-      </p>
-
-      <address class="contact">
-        <p>North Carolina, USA</p>
+      <div class="prose-block">
         <p>
-          <a href="/support">Contact us</a>
-          ·
-          <a href="mailto:hello@humblefern.com">hello@humblefern.com</a>
+          Humble Fern LLC is a North Carolina limited liability company and
+          independent software studio. We make mobile apps with a focus on calm
+          design and practical everyday tools.
         </p>
-      </address>
+        <p>
+          Our first product is Grove, a notes app for iPhone. Grove helps you
+          capture ideas and revisit them without noise.
+        </p>
+        <p>
+          The studio is based in North Carolina, USA. For questions about Humble
+          Fern LLC or Grove, visit
+          <a href="/support">Support</a>
+          or email
+          <a href="mailto:hello@humblefern.com">hello@humblefern.com</a>.
+        </p>
+      </div>
 
       <footer class="colophon">
         <hr class="rule" />

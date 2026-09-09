@@ -1,25 +1,45 @@
 # Humble Fern LLC
 
-Static one-page company site. Local preview: open `index.html`, or `python -m http.server` in this folder.
+Company website for [Humble Fern LLC](https://www.humblefern.com/).
 
-Target URL after deploy: `https://humblefern.vercel.app`
+## Live URLs
 
-## Deploy on Vercel (free)
+- Home: https://www.humblefern.com/
+- About: https://www.humblefern.com/about
+- Privacy: https://www.humblefern.com/privacy
+- Terms: https://www.humblefern.com/terms
+- Support: https://www.humblefern.com/support
 
-**Option A — Dashboard**
+Contact / support email: `hello@humblefern.com`
 
-1. Create a GitHub repo and push this folder (`git remote add origin …` then `git push -u origin master`).
-2. Open [vercel.com/new](https://vercel.com/new) and import that repo.
-3. **Project Name:** `humblefern`
-4. **Framework Preset:** Other
-5. Leave **Build Command** empty; **Output Directory** empty / `.`
-6. Deploy. Confirm the live page shows **HUMBLE FERN LLC**.
-
-**Option B — CLI** (from this folder, after `npx vercel login`)
+## Local preview
 
 ```bash
-npx vercel --yes
+python -m http.server 4173
+```
+
+Then open http://127.0.0.1:4173/
+
+## Checks
+
+```bash
+node scripts/check-pages.mjs
+```
+
+Fails if any required page is missing `Humble Fern LLC` or `hello@humblefern.com`, or still contains the old Gmail address.
+
+## Deploy on Vercel
+
+This folder is the `humblefern` Vercel project (custom domain `humblefern.com`).
+
+**Option A — Git push**
+
+Push to GitHub `myamin0516/humble-fern-web`. Production deploys from `master`.
+
+**Option B — CLI**
+
+```bash
 npx vercel --prod --yes
 ```
 
-When prompted, set the project name to `humblefern`. No build step; static files at the repo root.
+Framework: Other. No build command. Static files at the repo root. `cleanUrls` is enabled in `vercel.json`.
