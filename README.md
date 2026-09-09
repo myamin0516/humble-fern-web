@@ -2,15 +2,12 @@
 
 Company website for [Humble Fern LLC](https://www.humblefern.com/).
 
+Grove product pages (privacy, terms, support) live on the [Grove waitlist](https://grove-waitlist-silk.vercel.app/). This domain redirects `/privacy`, `/terms`, and `/support` there.
+
 ## Live URLs
 
 - Home: https://www.humblefern.com/
-- About: https://www.humblefern.com/about
-- Privacy: https://www.humblefern.com/privacy
-- Terms: https://www.humblefern.com/terms
-- Support: https://www.humblefern.com/support
-
-Contact / support email: `hello@humblefern.com`
+- Contact: `hello@humblefern.com`
 
 ## Local preview
 
@@ -26,20 +23,6 @@ Then open http://127.0.0.1:4173/
 node scripts/check-pages.mjs
 ```
 
-Fails if any required page is missing `Humble Fern LLC` or `hello@humblefern.com`, or still contains the old Gmail address.
-
 ## Deploy on Vercel
 
-This folder is the `humblefern` Vercel project (custom domain `humblefern.com`).
-
-**Option A — Git push**
-
-Push to GitHub `myamin0516/humble-fern-web`. Production deploys from `master`.
-
-**Option B — CLI**
-
-```bash
-npx vercel --prod --yes
-```
-
-Framework: Other. No build command. Static files at the repo root. `cleanUrls` is enabled in `vercel.json`.
+This folder is the `humblefern` Vercel project (custom domain `humblefern.com`). Push to GitHub `myamin0516/humble-fern-web`. Production deploys from `master`.

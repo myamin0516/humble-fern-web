@@ -1,16 +1,10 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const requiredPages = [
-  "index.html",
-  "about.html",
-  "privacy.html",
-  "terms.html",
-  "support.html",
-  "404.html",
-];
+const requiredPages = ["index.html", "404.html"];
+const groveOrigin = "https://grove-waitlist-silk.vercel.app";
 
 const mustContain = ["Humble Fern LLC", "hello@humblefern.com"];
 const mustNotContain = [
@@ -46,21 +40,13 @@ for (const page of requiredPages) {
       failed = true;
     }
   }
-
-  if (!failed) {
-    // keep going; collect all failures
-  }
 }
 
-const htmlFiles = readdirSync(root).filter((name) => name.endsWith(".html"));
-for (const page of htmlFiles) {
-  if (requiredPages.includes(page)) continue;
-  const html = readFileSync(join(root, page), "utf8");
-  for (const needle of mustNotContain) {
-    if (html.includes(needle)) {
-      console.error(`FAIL ${page}: still contains "${needle}"`);
-      failed = true;
-    }
+const vercel = readFileSync(join(root, "vercel.json"), "utf8");
+for (const path of ["/privacy", "/terms", "/support"]) {
+  if (!vercel.includes(`${groveOrigin}${path}`)) {
+    console.error(`FAIL vercel.json: missing redirect to ${groveOrigin}${path}`);
+    failed = true;
   }
 }
 
@@ -70,5 +56,5 @@ if (failed) {
 }
 
 console.log(
-  `check-pages ok: ${requiredPages.length} pages contain Humble Fern LLC and hello@humblefern.com`
+  "check-pages ok: company pages name Humble Fern LLC; Grove legal URLs redirect to the app site"
 );

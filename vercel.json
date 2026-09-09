@@ -1,4 +1,26 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/privacy",
+      "destination": "https://grove-waitlist-silk.vercel.app/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "https://grove-waitlist-silk.vercel.app/terms",
+      "permanent": true
+    },
+    {
+      "source": "/support",
+      "destination": "https://grove-waitlist-silk.vercel.app/support",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
 }
